@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Resultados de la Compra</h1>
+        <form class="result-form">
+            <div class="form-group">
+                <label>Nombre:</label>
+                <p>{{ nombre }}</p>
+            </div>
+            <div class="form-group">
+                <label>Total sin descuento:</label>
+                <p>${{ total_sin_descuento }}</p>
+            </div>
+            <div class="form-group">
+                <label>Total a pagar:</label>
+                <p>${{ total_con_descuento }}</p>
+            </div>
+            <input type="button" value="Volver" onclick="window.location.href='/'" class="back-button">
+        </form>
+    </div>
+</body>
+</html>
